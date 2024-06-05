@@ -1,48 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-int do_auth(void) {
-    char username[1024];
-    char password[1024];
+void display_file_size(char *filename) {
+    FILE *file = fopen(filename, "r");
 
-    printf("Username: ");
-    fgets(username, 1024, stdin);
-    fflush(stdin);
+    fseek(file, 0L, SEEK_END);
+    long size = ftell(file);
+    fclose(file);
 
-    printf("Password: ");
-    fgets(password, 1024, stdin);
-
-    printf("username at: 0x%x\n", &username);
-    printf("password at 0x%x\n", &password);
-
-    if (!strcmp(username, "user") &&
-        !strcmp(password, "password") == 0) {
-        return 0;
-    }
-
-    return -1;
+    printf("Velkost suboru '%s' je %ld bajtov\n", filename, size);
 }
 
-int log_error(int farray, char *msg) {
-    char *err, *mesg;
-    char buffer[24];
-
-    printf("mesg: 0x%x\n", mesg);
-    memset(buffer, 0x00, sizeof(buffer));
-    sprintf(buffer, "Error: %s", mesg);
-
-    printf("%s\n", buffer);
-    return 0;
+void delete_file(char *filename) {
+    if (remove(filename) == 0) {
+        printf("Subor '%s' uspesne vymazany\n", filename);
+    } else {
+        printf("Chyba: Nepodarilo sa vymazat subor '%s'\n", filename);
+    }
 }
 
-int main(void) {
-    switch (do_auth()) {
-        case -1:
-            log_error(-1, "Unable to login");
-            break;
-        default:
-            break;
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        printf("Pouzitie: %s <filename>\n", argv[0]);
+        return 1;
     }
+
+    char *filename = argv[1];
+
+    display_file_size(filename);
+    delete_file(filename);
+
     return 0;
 }

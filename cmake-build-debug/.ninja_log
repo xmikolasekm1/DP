@@ -1,0 +1,10 @@
+# ninja log v6
+18	492	7392996704419308	CMakeFiles/DP.dir/commandinjection.c.obj	890694d8092d56c2
+79	508	7392996705034460	CMakeFiles/DP.dir/heapoverflow.c.obj	d837192f97783300
+58	522	7392996704830207	CMakeFiles/DP.dir/format_string.c.obj	319d32ae754da77e
+26	532	7392996704503030	CMakeFiles/DP.dir/doublefree.c.obj	4c73a9d6208bc0c
+90	531	7392996705144443	CMakeFiles/DP.dir/insecureimplementation.c.obj	b2086866a1fb2c3
+8	533	7392996704322098	CMakeFiles/DP.dir/buffer_overflow.c.obj	a2711d147bab9bea
+508	784	7392996709327369	CMakeFiles/DP.dir/uninitialized_variable.c.obj	3da3b62ff0ed38
+495	896	7392996709191805	CMakeFiles/DP.dir/integer_overflow.c.obj	ea6e61131bbdd636
+29	161	7392997042095917	CMakeFiles/DP.dir/useafterfree.c.obj	86ece88b02ad5560

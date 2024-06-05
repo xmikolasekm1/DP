@@ -6,9 +6,9 @@ int main() {
     char *pouzivatelskemeno = 0;
     char *heslo = 0;
     while (1) {
-        if (name)
+        if (pouzivatelskemeno)
             printf("Adresa pouzivatelskeho mena: %x\n Pouzivatelske meno: %s\n", pouzivatelskemeno, pouzivatelskemeno);
-        if (pass) printf("Adresa hesla: %x\n Heslo: %s\n", heslo, heslo);
+        if (heslo) printf("Adresa hesla: %x\n Heslo: %s\n", heslo, heslo);
         printf("1: Pouzivatelske meno\n""2: Heslo\n""3: Reset\n""4: Prihlasenie\n""5: Ukoncit program\n");
         printf("Zvol si moznost: ");
         int volba = 0;
@@ -20,7 +20,7 @@ int main() {
                 scanf("%254s", pouzivatelskemeno);
                 if (strcmp(pouzivatelskemeno, "root") == 0) {
                     printf("Pouzit pouzivatelske meno root nie je povolene.\n");
-                    strcpy(pouzivatelskemno, "");
+                    strcpy(pouzivatelskemeno, "");
                 }
                 break;
             case 2:

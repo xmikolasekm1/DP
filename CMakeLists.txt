@@ -11,6 +11,6 @@ add_executable(DP
         heapoverflow.c
         insecureimplementation.c
         integer_overflow.c
-        uninitialized_variable.c
+        NullPoiinter.c
         useafterfree.c
         race_condition.c)

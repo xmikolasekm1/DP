@@ -16,7 +16,7 @@ int main() {
         return -1;
     }
 
-    if (s == (j - 1)) { //66201
+    if (s == (j - 1)) {
         printf("congratulations win :)\n");
     } else {
         printf("Sorry %d is not your lucky number\n", s);

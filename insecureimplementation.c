@@ -13,18 +13,18 @@ void zasifruj_data(const char *otvorenytext, const char *kluc) {
 int main() {
     char otvorenytext[100];
     char kluc[100];
-    
+
     printf("Zadaj nezasifrovanu spravu: ");
     fgets(otvorenytext, sizeof(otvorenytext), stdin);
     otvorenytext[strcspn(otvorenytext, "\n")] = '\0';
 
-    
+
     printf("Zadaj sifrovaci kluc: ");
     fgets(kluc, sizeof(kluc), stdin);
-    
+
     kluc[strcspn(kluc, "\n")] = '\0';
 
-    
+
     zasifruj_data(otvorenytext, kluc);
     printf("Stlac enter");
     getchar();

@@ -10,17 +10,16 @@ int main(void) {
     gets(buff);
 
 
-    if(strcmp(buff, "NaseZvoleneHeslo")){
+    if (strcmp(buff, "NaseZvoleneHeslo")) {
         printf("\n Nespravne heslo! \n");
-    }
-    else{
-	printf("\n Spravne heslo! \n");
-	pass = 1;
+    } else {
+        printf("\n Spravne heslo! \n");
+        pass = 1;
     }
 
 
-    if(pass){
-	printf("\n Pouzivatel ziskal administratorske prava! \n");
+    if (pass) {
+        printf("\n Pouzivatel ziskal administratorske prava! \n");
     }
 
 
